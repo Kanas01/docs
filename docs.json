@@ -21,11 +21,11 @@
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "interface"
             ]
           },
           {
-            "group": "Customization",
+            "group": "核心功能",
             "pages": [
               "essentials/settings",
               "essentials/navigation"
@@ -51,21 +51,21 @@
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "使用案例",
         "groups": [
           {
             "group": "API documentation",
             "pages": [
-              "api-reference/introduction"
+              "use-case/introduction"
             ]
           },
           {
             "group": "Endpoint examples",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "use-case/endpoint/get",
+              "use-case/endpoint/create",
+              "use-case/endpoint/delete",
+              "use-case/endpoint/webhook"
             ]
           }
         ]
@@ -74,14 +74,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "下载Nody",
+          "href": "https://pan.quark.cn/s/77d303048e19#/list/share",
+          "icon": "download"
         }
       ]
     }
@@ -93,7 +88,7 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
+        "label": "支持",
         "href": "mailto:hi@mintlify.com"
       }
     ],

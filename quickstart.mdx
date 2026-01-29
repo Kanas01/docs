@@ -1,78 +1,106 @@
 ---
 title: "快速上手"
-description: "Start building awesome documentation in minutes"
+description: "几分钟内开始构建您的创作"
 ---
 
-## Get started in three steps
+## 三步就搞定
 
-Get your documentation site running locally and make your first customization.
+在本地运行Nody并进行首次创建。
 
-### Step 1: Set up your local environment
+### 第一步: 获取您的API Key
 
 <AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
+  <Accordion icon="address-card" title="在API调用网站注册">
+    首先，您需要注册API调用网站以获取您的专属API Key，我们目前支持以下三家API调用网站：
     
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
+    1. [Comfly](https://ai.comfly.chat/register) 
+    2. [贞贞](https://ai.t8star.cn/register)
+    3. [linyun](https://linyunai.net/register)
+    ![title](/images/linyun_register.png)
+    
+    
   </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
+  <Accordion icon="key" title="获取您的API Key">
+    注册完成后，您需要在所注册的网站充值算力以获得可用的API Key。在左侧栏点击“钱包”后充值：
+    ![title](/images/linyun_wallet.png)
+    完成充值后，点击左侧栏的“令牌”，再点击右侧的“添加令牌”。完成设置后即可获得您的API Key。
   </Accordion>
 </AccordionGroup>
 
-### Step 2: Deploy your changes
+### 第二步: 将API填入您的本地配置
 
 <AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
+  <Accordion icon="file-pen" title="填入API配置">
+    解压.zip压缩包后，打开目录，找到`.env.local`文件：
+    ![title](/images/env_local.png)
+    使用记事本或其他编辑器打开：
+    ![title](/images/env_local_2.png)
+    打开后，在`COMFLY API KEY=`处填入您sk-开头的API Key，在`COMFLY BASE URL=`处填入您选择的API调用网站：
+    ![title](/images/fill_in_api.png)
+    您可以选择填入TopazLabs与remove.bg的API Key以启用图像增强和背景去除功能。
+
+    最后，保存此文件以启用API配置。
+    <Tip>三家API调用网站格式相通，因此直接填入API Key和BaseUrl即可，无需额外配置</Tip>
 </Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
-
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
-
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
 </AccordionGroup>
 
-### Step 3: Go live
+### 第三步: 开始使用！
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
+<Accordion icon="rocket" title="开始使用Nody">
+  在目录中找到`Nody.exe`，双击打开：
+  ![title](/images/nody_exe.png)
+  打开会跳出命令行窗口：
+  ![title](/images/bootstrap_1.png)
+  片刻等待后启动完成，浏览器页面会自动打开：
+  ![title](/images/bootstrap_success.png)
+  了解界面后即可轻松使用！
+  <Warning>注意：使用期间此命令行窗口不可关闭！否则服务将终止！</Warning>
 </Accordion>
 
-## Next steps
+## 接下来
 
-Now that you have your docs running, explore these key features:
+现在您已经启动了Nody！接下来，您可以先熟悉界面：
+
+<Card
+  title="了解界面"
+  icon="browser"
+  href="/interface"
+  horizontal
+>
+  了解我们的界面设计后即可轻松创作。
+</Card>
+
+或者直接探索以下的功能:
 
 <CardGroup cols={2}>
-
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
-</Card>
-
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
-</Card>
-
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
-</Card>
-
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
-</Card>
-
+<Card
+    title="文本创建"
+    icon="text"
+    href="/development"
+  >
+    引用任何媒体生成新文本。
+  </Card>
+  <Card
+    title="图像创建"
+    icon="image"
+    href="/essentials/settings"
+  >
+    使用文本和图像来编辑和生成新图像。
+  </Card>
+    <Card
+    title="视频创建"
+    icon="video"
+    href="/essentials/navigation"
+  >
+    使用文本，图像，和视频来生成新视频。
+  </Card>
+  <Card
+    title="音频创建"
+    icon="music"
+    href="/api-reference/introduction"
+  >
+    运用文本与视频制作动人音乐与音效。
+  </Card>
 </CardGroup>
 
 <Note>

@@ -8,52 +8,29 @@ description: '清晰，一致，即时'
   - 首先请您确保命令行窗口正常运行
 </Info>
 
-Follow these steps to install and run Mintlify on your operating system.
 
-<Steps>
-<Step title="Install the Mintlify CLI">
+## 主画布
 
-```bash
-npm i -g mint
-```
-</Step>
+<img src="images/main_canvas.png" alt="Descriptive alt text" />
 
-<Step title="Preview locally">
 
-Navigate to your docs directory where your `docs.json` file is located, and run the following command:
+启动后，浏览器即自动跳转到主画布。
 
-```bash
-mint dev
-```
+## 主画布操作
+### 双击创建节点或添加资源 <Icon icon="computer-mouse-button-left" size={20} />
+<img src="images/canvas-operation/double_click.gif" alt="Descriptive alt text" />
+在主画布上双击后即出现下拉菜单，可选择创建节点或者添加资源。
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+### 右键拖动画布 <Icon icon="computer-mouse-button-right" size={20} />
+<img src="images/canvas-operation/dragging.gif" alt="Descriptive alt text" />
 
-</Step>
-</Steps>
+### 滚轮缩放画布 <Icon icon="computer-mouse-scrollwheel" size={20} />
+<img src="images/canvas-operation/scaling.gif" alt="Descriptive alt text" />
 
-## Custom ports
+### 中键自适应视窗 <Icon icon="computer-mouse-scrollwheel" size={20} />
+<img src="images/canvas-operation/adapt.gif" alt="Descriptive alt text" />
 
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. For example, to run Mintlify on port 3333, use this command:
-
-```bash
-mint dev --port 3333
-```
-
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
-
-```md
-Port 3000 is already in use. Trying 3001 instead.
-```
-
-## Mintlify versions
-
-Please note that each CLI release is associated with a specific version of Mintlify. If your local preview does not align with the production version, please update the CLI:
-
-```bash
-npm mint update
-```
-
-## Validating links
+## 左上角标题栏
 
 The CLI can assist with validating links in your documentation. To identify any broken links, use the following command:
 
@@ -61,19 +38,12 @@ The CLI can assist with validating links in your documentation. To identify any 
 mint broken-links
 ```
 
-## Deployment
 
-If the deployment is successful, you should see the following:
-
-<Frame>
-  <img src="/images/checks-passed.png" alt="Screenshot of a deployment confirmation message that says All checks have passed." style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Code formatting
+## 底部工具栏
 
 We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
 
-## Troubleshooting
+## 右上角按钮组
 
 <AccordionGroup>
   <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>

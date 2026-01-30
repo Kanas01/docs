@@ -27,17 +27,18 @@
           {
             "group": "核心功能",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "essentials/text-creation",
+              "essentials/image-creation",
+              "essentials/video-creation",
+              "essentials/markdown",
+              "essentials/images",
+              "essentials/reusable-snippets"
             ]
           },
           {
             "group": "便捷功能",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              
             ]
           },
           {

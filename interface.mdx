@@ -10,62 +10,88 @@ description: '清晰，一致，即时'
 
 
 ## 主画布
-
-<img src="images/main_canvas.png" alt="Descriptive alt text" />
-
+<Frame>
+  <img src="images/main_canvas.png" alt="Descriptive alt text" />
+</Frame>
 
 启动后，浏览器即自动跳转到主画布。
 
 ## 基础操作
 <AccordionGroup>
-<Accordion icon="window" title="画布操作">
+<Accordion icon="window" title="如何操纵画布？">
 ### 双击创建节点或添加资源 <Icon icon="computer-mouse-button-left" size={20} />
-<img src="images/canvas-operation/double_click.gif" alt="Descriptive alt text" />
+<Frame>
+  <img src="images/canvas-operation/double_click.gif" alt="Descriptive alt text" />
+</Frame>
 在主画布上双击后即出现下拉菜单，可选择创建节点或者添加资源。
 
 ### 右键拖动画布 <Icon icon="computer-mouse-button-right" size={20} />
-<img src="images/canvas-operation/dragging.gif" alt="Descriptive alt text" />
-
+<Frame>
+  <img src="images/canvas-operation/dragging.gif" alt="Descriptive alt text" />
+</Frame>
 ### 滚轮缩放画布 <Icon icon="computer-mouse-scrollwheel" size={20} />
-<img src="images/canvas-operation/scaling.gif" alt="Descriptive alt text" />
-
+<Frame>
+  <img src="images/canvas-operation/scaling.gif" alt="Descriptive alt text" />
+</Frame>
 ### 中键自适应视窗 <Icon icon="computer-mouse-scrollwheel" size={20} />
-<img src="images/canvas-operation/adapt.gif" alt="Descriptive alt text" />
+<Frame>
+  <img src="images/canvas-operation/adapt.gif" alt="Descriptive alt text" />
+</Frame>
 </Accordion>
-<Accordion icon="circle-nodes" title="节点操作">
+<Accordion icon="circle-nodes" title="如何组织节点？">
+### 框选与成组
+左键单击并拖动可框选多个节点，框选后按下`Ctrl + G`即可成组。
+<Frame>
+  <img src="images/canvas-operation/grouping.gif" alt="Descriptive alt text" />
+</Frame>
+### 添加标签
+点击节点名称右侧的`+`号即可为节点创建或选择标签。
+<Frame>
+  <img src="images/canvas-operation/labeling.gif" alt="Descriptive alt text" />
+</Frame>
+对于成组的节点，亦可统一为节点组分配标签。
+<Frame>
+  <img src="images/canvas-operation/group_labeling.gif" alt="Descriptive alt text" />
+</Frame>
 </Accordion>
-<Accordion icon="bezier-curve" title="连线操作">
+<Accordion icon="bezier-curve" title="如何连接节点？">
+### 基础连线与删除
+**连线即意味着数据从上游走向下游。**
+点击节点的右侧端点拖出线连接至其他节点的左侧端点即可连线。光标停留在连线上片刻后可以点击删除连线。
+<Frame>
+  <img src="images/canvas-operation/connecting.gif" alt="Descriptive alt text" />
+</Frame>
+### 多个节点统一连线
+框选多个节点后，点击右侧或左侧的蓝色加号按钮并拖出线即可统一连接节点。
+<Frame>
+  <img src="images/canvas-operation/group_connecting.gif" alt="Descriptive alt text" />
+</Frame>
 </Accordion>
 </AccordionGroup>
 
+
+
 ## 左上角标题栏
-
-The CLI can assist with validating links in your documentation. To identify any broken links, use the following command:
-
-```bash
-mint broken-links
-```
-
+左上角的标题栏允许您进行项目级别的操作：
+1. 点击Nody Logo即可打开项目管理菜单
+2. 双击中间文字即可编辑项目名称
+3. 点击右侧按钮即可展开资源管理器
+<Frame>
+  <img src="images/headerbar.png" alt="Descriptive alt text" />
+</Frame>
 
 ## 底部工具栏
 
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
+底部工具栏提供了另一种导入资源的途径。您可以点击右侧的加号按钮，选择“文本输入”或“资源导入”。点击后光标将变为十字准星，您可以点击画布将节点创建在点击处。
+<Frame>
+  <img src="images/toolbar.png" alt="Descriptive alt text" />
+</Frame>
 
 ## 右上角按钮组
-
-<AccordionGroup>
-  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
-
-    This may be due to an outdated version of node. Try the following:
-    1. Remove the currently-installed version of the CLI: `npm remove -g mint`
-    2. Upgrade to Node v19 or higher.
-    3. Reinstall the CLI: `npm i -g mint`
-  </Accordion>
-
-  <Accordion title="Issue: Encountering an unknown error">
-  
-    Solution: Go to the root of your device and delete the `~/.mintlify` folder. Then run `mint dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in the latest CLI version? Check out the [CLI changelog](https://www.npmjs.com/package/mintlify?activeTab=versions).
+右上角按钮组为画布提供了独特功能。点击第一个按钮可切换颜色主题，第二个可打开Nody Copilot侧栏。
+<Frame caption='浅色模式'>
+  <img src="images/light_mode.png" alt="Descriptive alt text" />
+</Frame>
+<Frame caption='打开Nody Copilot侧栏'>
+  <img src="images/chat_button.png" alt="Descriptive alt text" />
+</Frame>
